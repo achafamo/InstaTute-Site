@@ -1,0 +1,23 @@
+<div id="links" class="well">
+  
+   
+ 
+  <h5>
+    <%= fa_icon 'plus' %>
+    <%= link_to 'Add Class', new_course_path %>
+  </h5>
+  
+  
+  <h5>
+    <%= fa_icon 'arrow-circle-left' %>
+    <% if false %>
+	    <%= link_to 'Request Tutor', request_tutor_path %>
+		<% end %>
+    <a href ="https://docs.google.com/a/colgate.edu/forms/d/e/1FAIpQLSdqbfX1W1LyfpZc9QlfqB7w8fgMeLXJjIn0tcwwOW5njwHhDw/viewform">Request Tutor</a>
+  </h5>
+  <h5>
+    <%= fa_icon 'envelope' %>
+    <%= link_to('Messages', conversations_path)%> 
+  </h5>
+ 
+</div>

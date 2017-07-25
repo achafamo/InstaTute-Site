@@ -1,0 +1,14 @@
+
+<div class="row">
+  <% @courses.each do |profile| %>
+    <div class="col-sm-6 ">
+      <div>
+        
+        <div class="caption">
+          <h5><%= link_to profile.name, profile %></h5>
+      	  <br>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

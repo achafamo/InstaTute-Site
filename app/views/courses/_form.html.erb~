@@ -1,0 +1,10 @@
+<%= form_for(@course) do |f| %>
+  <div class="form-group">
+    <%= f.label :course_name %>
+    <%= f.text_field :name, autofocus: true, placeholder: 'Event Name', class: 'form-control' %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit (@course.persisted? ? :update : :Create), class: 'btn btn-primary' %>
+  </div>
+<% end %>

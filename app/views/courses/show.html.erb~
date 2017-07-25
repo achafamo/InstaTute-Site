@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "events.css" %>
+<%= javascrit_link_tag "evetns.js" %> 
+<div>
+  <div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+		<%= render 'shared/classlinks' %>
+  </div>
+  <hr>
+  <div id="calendar" class = "col-lg-9">
+		
+	</div>
+	
+</div>
