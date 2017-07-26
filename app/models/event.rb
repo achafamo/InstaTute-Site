@@ -13,6 +13,6 @@ class Event < ActiveRecord::Base
 
   validates_presence_of :name
   validates_presence_of :event_datetime
-	validates_presence_of :all_day
+	
   validates_presence_of :user
 end

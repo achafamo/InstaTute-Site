@@ -7,18 +7,7 @@
     <%= f.label :when? %>
     <%= f.text_field :event_datetime, placeholder: 'When is it?', class: 'form-control' %>
   </div>
-	<div class="form-group ">    
-    
-		<tr>
-            <td><%= f.label 'all_day', 'Yes' %></td>
-            <td><%= f.radio_button :all_day, true %></td>
-        </tr>
-
-        <tr>
-            <td><%= f.label 'all_day', 'No' %></td>
-            <td><%= f.radio_button :all_day, false %></td>
-        </tr>
-  </div>
+	
   <div class="actions">
     <%= f.submit (@event.persisted? ? :update : :create), class: 'btn btn-primary' %>
   </div>

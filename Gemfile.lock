@@ -531,6 +531,7 @@ DEPENDENCIES
   jquery-atwho-rails
   jquery-rails
   jquery-turbolinks
+  jquery-ui-rails
   letter_opener
   localtower
   mailboxer

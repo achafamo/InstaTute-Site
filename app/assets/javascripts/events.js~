@@ -100,13 +100,14 @@ $(document).ready(function () {
 				  alert('There was an error while fetching events.');
 				}
 			},
-			eventClick:  function(event, jsEvent, view) {
-        //set the values and open the modal
-        $("#eventInfo").html("event details should pop up here");
-        $("#eventLink").attr('href', event.url);
-        $("#eventContent").dialog({ modal: true, title: event.title });
-    	},
+			eventClick: function(event, element) {
 
+        event.title = "Final";
+
+        $('#calendar').fullCalendar('updateEvent', event);
+
+    	},
+			
 			eventColor: '#ff3b30'
 		});
 	});
