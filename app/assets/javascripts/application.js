@@ -22,6 +22,7 @@
 //= require_tree .
 
 $(document).ready(function () {
-  $("#event_event_datetime").datetimepicker({format: 'Y/m/d H:i'});
+  $("#event_start_datetime").datetimepicker({format: 'Y/m/d h:i', mask:true});
+	$("#event_end_datetime").datetimepicker({format: 'Y/m/d h:i', mask:true });
   $("#user_dob").datetimepicker({timepicker: false, format: 'Y/m/d', maxDate: '0'});
 });

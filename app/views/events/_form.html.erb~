@@ -3,11 +3,20 @@
     <%= f.label :event_name %>
     <%= f.text_field :name, autofocus: true, placeholder: 'Event Name', class: 'form-control' %>
   </div>
-  <div class="form-group">
-    <%= f.label :when? %>
-    <%= f.text_field :event_datetime, placeholder: 'When is it?', class: 'form-control' %>
+	<div class="form-group">
+    <%= f.label :start_datetime, 'Starts' %>
+    <%= f.text_field :start_datetime, autofocus: true, placeholder: 'Start Time', class: 'form-control' %>
   </div>
-	
+	<div class="form-group">
+    <%= f.label :end_datetime, 'Ends' %>
+    <%= f.text_field :end_datetime, autofocus: true, placeholder: 'End Time', class: 'form-control' %>
+  </div>
+  <div class="field">    
+    <%= f.label "All Day" %> <br />
+    <%= f.check_box :all_day %> <br />
+   
+  </div>
+ 
   <div class="actions">
     <%= f.submit (@event.persisted? ? :update : :create), class: 'btn btn-primary' %>
   </div>

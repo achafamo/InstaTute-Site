@@ -715,16 +715,14 @@
   }
 </style>
 </head>
-<body>   
-    
-	  <div id='wrap'>
-
-	    <div id='calendar'></div>
-
-	    <div style='clear:both'></div>
-	  </div>
-    <div class="col-lg-3">
-      <%= render 'shared/links' %>
-    </div>
+<div>
+  <div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+		<%= render 'shared/links' %>
   </div>
-</body>
+  <hr>
+  <div id="calendar" class = "col-lg-9">
+		
+	</div>
+	
+</div>

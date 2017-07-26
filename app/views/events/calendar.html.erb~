@@ -715,17 +715,16 @@
   }
 </style>
 </head>
-<div>
-  <div class="col-lg-3">
-    <%= render 'shared/user_info' %>
-		<%= render 'shared/links' %>
+<body>   
+    
+	  <div id='wrap'>
+
+	    <div id='calendar'></div>
+
+	    <div style='clear:both'></div>
+	  </div>
+    <div class="col-lg-3">
+      <%= render 'shared/links' %>
+    </div>
   </div>
-  <hr>
-  <div id="calendar" class = "col-lg-9">
-		
-	</div>
-	<div id="eventContent" title="Event Details">
-    <div id="eventInfo"></div>
-    <p><strong><a id="eventLink" target="_blank"></a></strong></p>
-  </div>
-</div>
+</body>

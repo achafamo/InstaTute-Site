@@ -1,0 +1,8 @@
+class ChangeColumnName < ActiveRecord::Migration[5.0]
+  def change
+		rename_column :events, :event_datetime, :start_datetime
+  end
+	def self.up
+    add_column :events, :end_datetime, :datetime
+  end
+end
