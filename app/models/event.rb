@@ -5,6 +5,7 @@
 class Event < ActiveRecord::Base
   include Shared::Callbacks
   belongs_to :user
+	has_many :course
   acts_as_votable
   acts_as_commentable
 

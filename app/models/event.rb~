@@ -12,7 +12,7 @@ class Event < ActiveRecord::Base
   tracked only: [:create, :like], owner: Proc.new{ |controller, model| model.user }
 
   validates_presence_of :name
-  validates_presence_of :event_datetime
+  validates_presence_of :start_datetime
 	
   validates_presence_of :user
 end
