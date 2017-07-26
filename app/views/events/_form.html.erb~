@@ -1,22 +1,29 @@
 <%= form_for(@event) do |f| %>
-  <div class="form-group">
-    <%= f.label :event_name %>
-    <%= f.text_field :name, autofocus: true, placeholder: 'Event Name', class: 'form-control' %>
-  </div>
-	<div class="form-group">
-    <%= f.label :start_datetime, 'Starts' %>
+	<div class = "form-group", style = "float:left">    
+		
+    <%= f.label:all_day, 'All Day' %> 
+    <%= f.check_box :all_day, label:true %>
+	 <br>
+   
+  </div> 
+	<div class="form-group",  style ="align:left">    
     <%= f.text_field :start_datetime, autofocus: true, placeholder: 'Start Time', class: 'form-control' %>
   </div>
-	<div class="form-group">
-    <%= f.label :end_datetime, 'Ends' %>
+	<div class="form-group">    
     <%= f.text_field :end_datetime, autofocus: true, placeholder: 'End Time', class: 'form-control' %>
   </div>
-  <div class="field">    
-    <%= f.label "All Day" %> <br />
-    <%= f.check_box :all_day %> <br />
-   
+  <div class="form-group">
+    
+    <%= f.text_field :name, autofocus: true, placeholder: 'Event Name', class: 'form-control', label: false %>
   </div>
- 
+	
+	
+ 	
+	<div class = "form_group", style = "float:left">
+		<%= f.label:course_name, 'Choose Calendar' %>
+		<%= f.select :course_name, @courses.collect { |course| [course.name] } %>
+		<br>
+ 	</div>
   <div class="actions">
     <%= f.submit (@event.persisted? ? :update : :create), class: 'btn btn-primary' %>
   </div>

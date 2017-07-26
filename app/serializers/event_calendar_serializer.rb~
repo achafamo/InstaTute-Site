@@ -4,7 +4,8 @@ class EventCalendarSerializer < ActiveModel::Serializer
   def title
     object.name
   end
-
+	def course
+		object.course_name
   def start
     object.start_datetime
   end
@@ -14,6 +15,6 @@ class EventCalendarSerializer < ActiveModel::Serializer
   end
 
   def allDay
-    true
+    object.all_day
   end
 end
