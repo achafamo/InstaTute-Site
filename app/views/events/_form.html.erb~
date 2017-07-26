@@ -19,9 +19,9 @@
 	
 	
  	
-	<div class = "form_group", style = "float:left">
-		<%= f.label:course_name, 'Choose Calendar' %>
-		<%= f.select :course_name, @courses.collect { |course| [course.name] } %>
+	<div class = "form_group", style = "float:left" %>
+		<%= f.label:course, 'Choose Calendar' %>
+		<%= f.select :course, @courses.collect { |course| [course.name] } %>
 		<br>
  	</div>
   <div class="actions">

@@ -19,11 +19,7 @@
 	
 	
  	
-	<div class = "form_group", style = "float:left" %>
-		<%= f.label:course_name, 'Choose Calendar' %>
-		<%= f.select :course_name, @courses.collect { |course| [course.name] } %>
-		<br>
- 	</div>
+	
   <div class="actions">
     <%= f.submit (@event.persisted? ? :update : :create), class: 'btn btn-primary' %>
   </div>
