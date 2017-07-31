@@ -41,16 +41,17 @@ $(document).ready(function () {
 			/* initialize the calendar
 			-----------------------------------------------------------------*/
 		var friends_calendar = $('#calendar').fullCalendar({
-		  defaultView: 'month',
+		  
 			header: {
 					left: 'title',
 					center: 'agendaDay,agendaWeek,month',
 					right: 'prev,next today'
 				},
+			defaultView: 'agendaWeek',
 		  editable: true,
 			firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
 			selectable: true,
-			defaultView: 'month',
+			
 	
 		
 			selectHelper: true,

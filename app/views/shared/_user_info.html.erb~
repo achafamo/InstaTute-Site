@@ -22,7 +22,17 @@
   <h5>
     <i class="icon-record"></i> <%= pluralize(@user.points, 'point') %>
   </h5>
-  
+  <% if @user.badges.empty? %>
+    <h5>No badge yet.</h5>
+  <% else %>
+    <h5>
+      <% @user.badges.each do |badge| %>
+        <i class="<%= badge.custom_fields[:icon] %>" style="color: <%= badge.custom_fields[:color] %>">
+        </i>
+        <%= badge.name %>
+      <% end %>
+    </h5>
+  <% end %>
   <br>
   <div class="text-center">
     <% unless is_current_user?(@user) %>
