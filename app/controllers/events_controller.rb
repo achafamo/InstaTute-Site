@@ -56,7 +56,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:name, :start_datetime, :end_datetime, :all_day, :course_name, :description)
+    params.require(:event).permit(:name, :start_datetime, :end_datetime, :all_day, :description)
   end
 
   def set_event
