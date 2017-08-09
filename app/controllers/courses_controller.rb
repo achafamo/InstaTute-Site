@@ -29,8 +29,8 @@ class CoursesController < ApplicationController
     if request.xhr?
       friend_events = Event.select("events.*").joins("INNER JOIN follows ON events.user_id = follows.followable_id").where("follows.follower_id = #{current_user.id} AND follows.followable_type ='User'")
       current_user_events = current_user.events
-      @events = Event.from("(#{friend_events.to_sql} UNION #{current_user_events.to_sql}) as events").where("events.start_datetime BETWEEN '#{params[:start]}' AND '#{params[:end]}'").where("events.course_name LIKE '#{params[:course_name]}'")
-    end
+      @events = Event.from("(#{friend_events.to_sql} UNION #{current_user_events.to_sql}) as events").where("events.start_datetime BETWEEN '#{params[:start]}' AND '#{params[:end]}'")
+    end      
     respond_to do |format|
       format.html
       format.json { render :json => @events, each_serializer: EventCalendarSerializer }

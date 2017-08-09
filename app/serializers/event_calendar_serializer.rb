@@ -18,4 +18,8 @@ class EventCalendarSerializer < ActiveModel::Serializer
   def allDay
     object.all_day
   end
+	def description
+		object.description
+	end
+
 end

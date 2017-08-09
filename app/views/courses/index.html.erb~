@@ -1,5 +1,7 @@
 <div class="row">
-  
+   <div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+  </div>
   <div class="col-lg-6 well">
     <h3>My Courses</h3>
     <hr>

@@ -715,16 +715,20 @@
   }
 </style>
 </head>
-<body>   
-    
-	  <div id='wrap'>
-
-	    <div id='calendar'></div>
-
-	    <div style='clear:both'></div>
-	  </div>
-    <div class="col-lg-3">
-      <%= render 'shared/links' %>
-    </div>
+<div>
+  <div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+		<%= render 'shared/links' %>
   </div>
-</body>
+	<div id="eventContent" title="Event Details" style="display:none;">
+    Start: <span id="startTime"></span><br>
+    End: <span id="endTime"></span><br><br>
+    <p id="eventInfo"></p>
+    <p><strong><a id="eventLink" href="" target="_blank">Read More</a></strong></p>
+	</div>
+  <hr>
+  <div id="calendar" class = "col-lg-9">
+		
+	</div>
+	
+</div>

@@ -50,7 +50,7 @@ $(document).ready(function () {
 		  editable: true,
 			firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
 			selectable: true,
-			defaultView: 'month',
+			defaultView: 'agendaWeek',
 	
 		
 			selectHelper: true,
@@ -84,7 +84,7 @@ $(document).ready(function () {
 		
 				// render the event on the calendar
 				// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+				$('#calendr').fullCalendar('renderEvent', copiedEventObject, true);
 		
 				// is the "remove after drop" checkbox checked?
 				if ($('#drop-remove').is(':checked')) {
