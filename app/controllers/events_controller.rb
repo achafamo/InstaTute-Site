@@ -9,7 +9,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-		@courses = @current_user.courses
+		@course = Course.all
   end
 
   def create
@@ -56,7 +56,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:name, :start_datetime, :end_datetime, :all_day, :description)
+    params.require(:event).permit(:name, :start_datetime, :end_datetime, :all_day, :description, :course_title)
   end
 
   def set_event

@@ -10,7 +10,7 @@ class CoursesController < ApplicationController
 	end
 	def show
     #@comments = @post.comments.all
-		#@course = Course.find(params[:id])
+		@course = Course.find(params[:id])
 
   end
 

@@ -17,7 +17,10 @@
     <%= f.text_field :name, autofocus: true, placeholder: 'Event Name', class: 'form-control', label: false %>
   </div>
 
-	
+	<div class = "form-group">
+		<% options = options_from_collection_for_select(@course, 'id', 'name') %>
+		<%= f.select :course_title,  options %>
+	</div>
   
 	<div class="form-group">
     

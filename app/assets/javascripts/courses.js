@@ -100,13 +100,27 @@ $(document).ready(function () {
 				  alert('There was an error while fetching events.');
 				}
 			},
+
 			eventClick:  function(event, jsEvent, view) {
         //set the values and open the modal
-        $("#eventInfo").html("event details should pop up here");
+				console.log(event.title);
+				$("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+        $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+        $("#eventInfo").html(event.description);
         $("#eventLink").attr('href', event.url);
-        $("#eventContent").dialog({ modal: true, title: event.title });
-    	},
+				$(".eventTitle").html(event.title);
+				$(".eventDescription").html(event.description);				
+				$(".eventContent").css('display', 'block');
+        $(".eventContent").css('left', '25%');
+        $(".eventContent").css('top', '30%');
+		
+        return false;
+      },
 
 			eventColor: '#ff3b30'
-		});
+
+			});
+			$(".eventContent").click(function() {
+		          $(".eventContent").css('display', 'none');
+		  });
 	});

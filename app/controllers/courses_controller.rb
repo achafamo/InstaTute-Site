@@ -26,6 +26,7 @@ class CoursesController < ApplicationController
     end
   end	
 	def calendar
+		@course = Course.find(params[:id]) #filter events by(events.course_title = @course.id)
     if request.xhr?
       friend_events = Event.select("events.*").joins("INNER JOIN follows ON events.user_id = follows.followable_id").where("follows.follower_id = #{current_user.id} AND follows.followable_type ='User'")
       current_user_events = current_user.events
