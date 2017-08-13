@@ -1,4 +1,4 @@
-<div id="endless-scroll" style = "align:left" class="well  hidden">
+<div id="endless-scroll" class="well  hidden">
   <%= image_tag 'ajax-loader.gif' %>
   <%= will_paginate resources %>
 </div>

@@ -5,10 +5,11 @@
   <div class="col-lg-6 well">
     <h3>My Courses</h3>
     <hr>
-    <div id="followers">
-      <p><%= render 'courses/course', users: @users %></p>
-		 	<hr>
+    <div id="friends">
+      <%= render(@friends) || render('shared/no_resource', resources: 'Friends') %>
     </div>
+    
+    
     
   </div>
   <div class="col-lg-3">

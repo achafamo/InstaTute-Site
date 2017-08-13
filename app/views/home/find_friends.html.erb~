@@ -14,7 +14,7 @@
 		<br> 
 		<h3>
 		  <%= fa_icon 'pencil' %>
-		  <%= link_to 'Add New Course', new_course_path %>
+		  <%= link_to 'Create Event', new_course_path %>
   	</h3>
   </div>
   <div class="col-lg-3">

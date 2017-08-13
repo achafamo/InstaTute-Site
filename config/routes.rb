@@ -22,8 +22,9 @@ Rails.application.routes.draw do
 			get :usersearch
 			get :index
 			get :google_oauth2
+      get :calendar
 	  end
-    member do
+    member do     
       get :friends
       get :followers
       get :deactivate

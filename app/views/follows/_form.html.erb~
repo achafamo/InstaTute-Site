@@ -5,7 +5,7 @@
     <% end %>
   <% else %>
     <%= form_tag follow_path(user_id: user.id), method: :post, remote: true do %>
-      <%= button_tag 'Select Course', class: 'btn btn-success' %>
+      <%= button_tag 'Add Course', class: 'btn btn-success' %>
     <% end %>
   <% end %>
 </div>

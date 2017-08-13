@@ -40,7 +40,9 @@ class UsersController < ApplicationController
 	def calendar
 		
     if request.xhr?      
-      @events = Event.where(owner: @user)
+      current_user_events = Event.where(owner:@user)
+			friend_events = current_user_events
+      @events = Event.from("(#{friend_events.to_sql} UNION #{current_user_events.to_sql}) as events").where("events.start_datetime BETWEEN '#{params[:start]}' AND '#{params[:end]}'")
     end      
     respond_to do |format|
       format.html

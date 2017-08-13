@@ -42,7 +42,7 @@ $(document).ready(function () {
 	
 			/* initialize the calendar
 			-----------------------------------------------------------------*/
-		var friends_calendar = $('#calendars').fullCalendar({
+		var friends_calendar = $('#calendar').fullCalendar({
 		  
 			header: {
 					left: 'title',
@@ -87,7 +87,7 @@ $(document).ready(function () {
 		
 				// render the event on the calendar
 				// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-				$('#calendars').fullCalendar('renderEvent', copiedEventObject, true);
+				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
 		
 				// is the "remove after drop" checkbox checked?
 				if ($('#drop-remove').is(':checked')) {

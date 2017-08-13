@@ -2,10 +2,7 @@
   
    
  
-  <h5>
-    <%= fa_icon 'plus' %>
-    <%= link_to 'Add Class', new_course_path %>
-  </h5>
+  
 	<h5>
     <%= fa_icon 'plus' %>
     <%= link_to 'Add to Calendar', new_event_path %>
