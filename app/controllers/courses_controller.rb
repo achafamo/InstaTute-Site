@@ -20,7 +20,8 @@ class CoursesController < ApplicationController
   def create
     @course = @current_user.courses.new(course_params)
     if @course.save
-      redirect_to courses_path
+			flash[:notice] = "You have succesfully created your course. Your calendar for this course will be ready in 1 day."
+      redirect_to root_path
     else
       redirect_to root_path, notice: @post.errors.full_messages.first
     end

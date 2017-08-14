@@ -63,6 +63,8 @@ GEM
       activesupport (>= 3.0.0)
     ambry (1.0.0)
     arel (7.1.4)
+    authority (3.3.0)
+      activesupport (>= 3.0.0)
     auto_html (1.6.4)
       redcarpet (~> 3.1)
       rinku (~> 1.5.0)
@@ -432,6 +434,7 @@ GEM
       railties (>= 4.2.0, < 5.1)
     retriable (3.0.2)
     rinku (1.5.1)
+    rolify (5.1.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -507,6 +510,7 @@ DEPENDENCIES
   acts_as_commentable
   acts_as_follower
   acts_as_votable (~> 0.10.0)
+  authority
   auto_html (~> 1.6.4)
   autoprefixer-rails
   aws-sdk (~> 2.3)
@@ -547,6 +551,7 @@ DEPENDENCIES
   puma
   rails (= 5.0.2)
   rails_12factor
+  rolify
   sanitize
   sass-rails (~> 5.0.0)
   spring

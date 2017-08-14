@@ -20,12 +20,14 @@ class CoursesController < ApplicationController
   def create
     @course = @current_user.courses.new(course_params)
     if @course.save
-      redirect_to courses_path
+			flash[:success] = "You have succesfully created your course. Your calendar for this course will be ready in 1 day."
+      redirect_to root_path
     else
       redirect_to root_path, notice: @post.errors.full_messages.first
     end
   end	
 	def calendar
+		@course = Course.find(params[:id]) #filter events by(events.course_title = @course.id)
     if request.xhr?
       friend_events = Event.select("events.*").joins("INNER JOIN follows ON events.user_id = follows.followable_id").where("follows.follower_id = #{current_user.id} AND follows.followable_type ='User'")
       current_user_events = current_user.events

@@ -47,6 +47,8 @@ group :production do
 end
 gem 'activerecord-session_store'
 gem 'devise'
+gem 'authority'
+gem 'rolify'
 gem 'carrierwave',  '>= 1.0.0.rc', '< 2.0'
 gem 'friendly_id', '~> 5.0'
 gem 'xmlrpc'

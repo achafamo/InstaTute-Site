@@ -13,9 +13,11 @@ class UsersController < ApplicationController
   end
 
   def edit
+		@roles =  Role.all #[:student, :professor, :admin]
   end
 
   def update
+		params[:user][:role_ids] ||= []
     if @user.update(user_params)
       redirect_to user_path(@user)
     else
@@ -52,7 +54,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :about, :avatar, :cover,
-                                 :sex, :dob, :location, :phone_number)
+                                 :sex, :dob, :location, :phone_number, role_ids: [])
   end
 
   def check_ownership

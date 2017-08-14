@@ -3,7 +3,10 @@
 # under GNU GPL v2 or later. See the LICENSE.
 
 class Event < ActiveRecord::Base
+  resourcify
+  include Authority::Abilities  
   include Shared::Callbacks
+	
   belongs_to :user
 	has_many :course
   acts_as_votable

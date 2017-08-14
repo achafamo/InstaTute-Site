@@ -42,15 +42,6 @@
           <%= f.label :sex %><br>
           <%= f.select :sex, options_for_seasons, class: 'form-control', prompt: 'Select One' %>
         </div>
-	<div class="form-group">
-          <%= f.label :role, "Roles" %>
-          <% for role in @roles %>
-            <div>
-              <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
-              <%= role.name.capitalize %>
-            </div>
-          <% end %>
-        </div>
         <div class="actions">
           <%= submit_tag 'Update', class: 'btn btn-primary' %>
         </div>

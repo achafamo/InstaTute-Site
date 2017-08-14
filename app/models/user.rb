@@ -3,6 +3,8 @@
 # under GNU GPL v2 or later. See the LICENSE.
 
 class User < ActiveRecord::Base
+	include Authority::UserAbilities
+  rolify
   # Include default devise modules. Others available are:
   has_merit
   # :confirmable, :lockable, :timeoutable and :omniauthable

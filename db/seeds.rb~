@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 [:admin, :professor, :student].each do |role|
-  Role.where({ name: role }, without_protection: true).first_or_create
+  Role.find_or_create_by({ name: role }, without_protection: true)
 end
