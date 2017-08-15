@@ -11,6 +11,15 @@ class UsersController < ApplicationController
   def show
     @activities = PublicActivity::Activity.where(owner: @user).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
   end
+	def index
+  	@users = User.all
+  	if params[:search]
+    	@users = User.search(params[:search]).order("created_at DESC")
+  	else
+    	@users = USer.all.order("created_at DESC")
+  	end
+		render 'index'
+	end
 
   def edit
 		@roles =  Role.all #[:student, :professor, :admin]
@@ -40,15 +49,17 @@ class UsersController < ApplicationController
     render json: @user.following_users.as_json(only: [:id, :name]), root: false
   end
 	def calendar
-		
-    if request.xhr?      
-      @events = Event.where(owner: @user)
-    end      
+    if request.xhr?
+      friend_events = Event.select("events.*").joins("INNER JOIN follows ON events.user_id = follows.followable_id").where("follows.follower_id = #{current_user.id} AND follows.followable_type ='User'")
+      current_user_events = current_user.events
+      @events = Event.from("(#{friend_events.to_sql} UNION #{current_user_events.to_sql}) as events").where("events.start_datetime BETWEEN '#{params[:start]}' AND '#{params[:end]}'")
+    end
     respond_to do |format|
       format.html
       format.json { render :json => @events, each_serializer: EventCalendarSerializer }
     end
   end
+
 
   private
 

@@ -10,6 +10,14 @@
       <%= link_to "InstaTute", root_url, class: "navbar-brand" %>
     </div>
     <div class="collapse navbar-collapse" id="navbar-top">
+			<ul class="nav navbar-nav" >
+			<% if false %>
+				<%= form_tag(find_friends_path, :method => "get", id: "search-form") do %>
+					<%= text_field_tag :search, params[:search], placeholder: "Search Courses" %>
+					<%= submit_tag "Search", :name => nil %>
+				<% end %>
+			<% end %>
+			</ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="dropdown">

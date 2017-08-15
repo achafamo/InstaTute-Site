@@ -3,8 +3,17 @@
     <%= render 'shared/user_info' %>
   </div>
   <div class="col-lg-6 well">
-    <h3>Choose Course</h3>
+    <h3>Courses</h3>
     <hr>
+    <div>
+			<% if user_signed_in? %>
+				<%= form_tag(find_friends_path, :method => "get", id: "search-form") do %>
+					<%= text_field_tag :search, params[:search], placeholder: "Search by course name" %>
+					<%= submit_tag "Search", :name => nil %>
+				<% end %>
+			<% end %>
+		</div>
+		<hr>
     <div id="users">
       <%= render(@users) || render('shared/no_resource', resources: 'Courses') %>
     </div>

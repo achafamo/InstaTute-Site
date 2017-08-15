@@ -97,7 +97,7 @@ $(document).ready(function () {
 		
 			},
 			events: {
-				url: '/users/calendar',
+				url: '/events/calendar',
 				type: 'GET',
 				error: function () {
 				  alert('There was an error while fetching events.');
