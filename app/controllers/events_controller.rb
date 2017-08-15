@@ -10,6 +10,8 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
 		@course = Course.all
+    
+    @colors = [{"name"=>"Red", "val"=>"#f00"}, {"name"=>"Blue", "val"=>"blue"}, {"name"=>"Yellow", "val"=>"yellow"}, {"name"=>"Green", "val"=>"green"}]
   end
 
   def create

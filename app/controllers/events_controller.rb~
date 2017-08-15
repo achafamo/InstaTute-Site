@@ -10,6 +10,8 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
 		@course = Course.all
+    
+    @colors = [{"name"=>"Red", "val"=>"#f00"}, {"name"=>"Blue", "val"=>"blue"}, {"name"=>"Yellow", "val"=>"yellow"}]
   end
 
   def create
@@ -56,7 +58,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:name, :start_datetime, :end_datetime, :all_day, :description)
+    params.require(:event).permit(:name, :start_datetime, :end_datetime, :all_day, :description, :course_title)
   end
 
   def set_event

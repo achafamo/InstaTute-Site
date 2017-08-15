@@ -10,9 +10,4 @@ module ApplicationHelper
   def activity_resources_exist?(activity)
     activity && activity.trackable && activity.owner
   end
-	def options_with_colors(colors)
-		colors.collect do |color, code| 
-		  "<option value='#{code}' style='background-color:#{code};'>#{color}</option> "
-		end.join
-	end
 end

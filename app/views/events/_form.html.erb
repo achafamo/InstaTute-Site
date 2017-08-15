@@ -16,9 +16,9 @@
     
     <%= f.text_field :name, autofocus: true, placeholder: 'Event Name', class: 'form-control', label: false %>
   </div>
-	<% if false %>
+	<% if true %>
 		<div class = "form-group">
-			<% options = options_from_collection_for_select(@course, 'id', 'name') %>
+			<% options = options_for_select(@colors.map { |obj| [obj['name'], obj['val']] }) %>
 			<%= f.select :course_title,  options %>
 		</div>
 	<%end %>  

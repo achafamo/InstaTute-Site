@@ -1,10 +1,10 @@
 class EventCalendarSerializer < ActiveModel::Serializer
-  attributes :id, :start, :end, :title, :allDay
+  attributes :id, :start, :end, :title, :allDay, :description, :backgroundColor
 
   def title
     object.name
   end
-	def course
+	def backgroundColor
 		object.course_title
 	end
   def start
