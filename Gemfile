@@ -20,8 +20,9 @@ gem 'jquery-atwho-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
-
+gem 'pg'
 group :development do
+	gem 'derailed'
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -33,12 +34,12 @@ end
 group :development, :test do
   gem 'puma'
   #gem 'sqlite3'
-  gem 'pg'
+  
   gem "localtower"
 end
 
 group :production do
-  gem 'pg'
+  
   gem 'unicorn'
   gem 'rails_12factor'
   gem 'fog', '~> 1.36.0'
