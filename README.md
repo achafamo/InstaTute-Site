@@ -1,4 +1,4 @@
-#InstaTute-Site
+# InstaTute-Site
 
 Instatute is a ruby on rails web applications that is designed to reduce the effort students need to make in order to properly manage their time and class schedules. It allows students to sign in into their accounts and upload syllabi for each of their courses. Our application then takes these syllabi and parses the document for class and exam times, assignment due dates, office hours, etc and automatically create semester calendars for each of their classes. This allows each student to have a personalized calendar for a whole semester with very minimal effort from their part
 
@@ -7,7 +7,7 @@ Instatute is a ruby on rails web applications that is designed to reduce the eff
 [Ruby on Rails]
 [Bootstrap]
 [Devise]
-How do I get set up?
+**How to get set up?
 
 To set it up on your local machine here is what you need to do. Install Ruby & Rails. Clone this repo using the following command:
 
