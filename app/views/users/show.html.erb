@@ -3,6 +3,19 @@
 <div id="user-<%= @user.id %>" class="row">
   <div class="col-lg-3">
     <%= render 'shared/user_info' %>
+		 <% if  is_current_user?(@user) %>
+      <div class="well">
+        <ul class="nav nav-pills nav-stacked">
+          <li><%= link_to 'Edit Profile', edit_user_path(@user) %></li>
+          <li><%= link_to 'Change password', edit_user_registration_path %></li>
+          
+          <li><%= link_to 'Deactivate', deactivate_user_path(@user) %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+	<div class="col-lg-3">
+   
   </div>
   <div id="calendars" class = "col-lg-9">
 	<hr>
@@ -19,16 +32,5 @@
     <%= render 'shared/paginate', resources: @activities %>
   </div>
 	
-  <div class="col-lg-3">
-    <% if false %>
-      <div class="well">
-        <ul class="nav nav-pills nav-stacked">
-          <li><%= link_to 'Edit Profile', edit_user_path(@user) %></li>
-          <li><%= link_to 'Change password', edit_user_registration_path %></li>
-          
-          <li><%= link_to 'Deactivate', deactivate_user_path(@user) %></li>
-        </ul>
-      </div>
-    <% end %>
-  </div>
+  
 </div>
