@@ -7,6 +7,7 @@ Instatute is a ruby on rails web applications that is designed to reduce the eff
 [Ruby on Rails]
 [Bootstrap]
 [Devise]
+
 **How to get set up?**
 
 To set it up on your local machine here is what you need to do. Install Ruby & Rails. Clone this repo using the following command:
